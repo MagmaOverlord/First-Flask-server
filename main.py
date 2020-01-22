@@ -1,8 +1,9 @@
-from flask import Flask
-app = Flask('app')
+import flask
+app = flask.Flask(__name__)
 
 @app.route('/')
-def hello_world():
-  return '<h1 style="color:red; text-align:center;">Hello</h1>'
+def home():
+  return flask.send_file('static/index.html')
 
-app.run(host='0.0.0.0', port=8080)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
