@@ -7,10 +7,23 @@
         <link href="/static/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <h1>Home</h1>
+        <h1>The Official Mint Chococolate Chip Ice Cream Fan Page!</h1>
+        <h2>Enjoy your stay!</h2>
+        <h3>Home</h3>
         <p><a href='/static/about.html'>About</a></p>
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src="https://d1wv4dwa0ti2j0.cloudfront.net/live/img/production/detail/ice-cream/cartons_rich-creamy_mint-chocolate-chip.jpg" width='500px' />
+        <p>Mint Chocolate Chip is a wonderful Ice Cream flavor that many people enjoy. If you like to eat Ice Cream, you should try Mint Chocolate Ice Cream.</p>
+        <input id='num' />
+        <button onclick='next()'>Get Ice Cream!</button>
+        <script>
+            function next() {
+                var num = document.getElementById('num').value;
+                if ((num%1) == 0) {
+                    window.location = "/iceCream/"+num;
+                } else {
+                    alert("Must input a number");
+                }
+            }
+        </script>
     </body>
 </html>
