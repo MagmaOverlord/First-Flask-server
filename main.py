@@ -3,7 +3,12 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def home():
-  return flask.send_file('static/index.html')
+  return flask.send_file('static/index.html')  
+
+
+@app.route('/about')
+def about():
+  return flask.send_file('static/about.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
